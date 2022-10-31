@@ -3,7 +3,7 @@ import React from 'react';
 export default function CompanyServices() {
   return (
     <div className="services">
-      <h1 className="services__title">Services</h1>
+      <h2 className="services__title">Services</h2>
       <div className="services__list">
         <div className="list-item">
           <center><img src="/images/advancement.jpeg" height="200px" /></center>
