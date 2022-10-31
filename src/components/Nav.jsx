@@ -84,27 +84,27 @@ export default function Nav() {
       <ul className="nav__links-container">
         {homeActive ? 
           <a className="nav__link nav__link--active" onClick={handleSelectHome} draggable={false}>Home</a> 
-        : 
+          : 
           <a className="nav__link" onClick={handleSelectHome} draggable={false}>Home</a>
         }
         {servicesActive ? 
           <a className="nav__link nav__link--active" draggable={false}>Services</a> 
-        : 
+          : 
           <a className="nav__link" onClick={handleSelectServices} draggable={false}>Services</a>
         }
         {aboutActive ?
           <a className="nav__link nav__link--active" onClick={handleSelectAbout} draggable={false}>About</a>
-        :
+          :
           <a className="nav__link" onClick={handleSelectAbout} draggable={false}>About</a>
         }
         {scheduleActive ?
           <a className="nav__link nav__link--active" onClick={handleSelectSchedule} draggable={false}>Schedule</a>
-        :
+          :
           <a className="nav__link" onClick={handleSelectSchedule} draggable={false}>Schedule</a>
         }
         {contactActive ?
           <a className="nav__link nav__link--active" onClick={handleSelectContact} draggable={false}>Contact</a>
-        :
+          :
           <a className="nav__link" onClick={handleSelectContact} draggable={false}>Contact</a>
         }
       </ul>

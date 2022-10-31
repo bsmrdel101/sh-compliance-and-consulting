@@ -1,0 +1,25 @@
+.services {
+  &__title {
+    margin-top: 70px;
+    font-size: var(--font-xl);
+    text-align: center;
+  }
+
+  &__list {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: calc(var(--font-md) - 0.05rem);
+    text-align: start;
+    justify-content: center;
+
+    h2 {
+      font-size: var(--font-lg);
+      text-align: center;
+    }
+  }
+}
+
+.list-item {
+    max-width: 30rem;
+}

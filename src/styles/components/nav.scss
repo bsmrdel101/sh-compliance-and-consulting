@@ -1,6 +1,5 @@
 .nav {
-  box-shadow: 0 6px 3px -2px rgba(0, 0, 0, 0.171);
-  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 6px 3px -2px rgba(0, 0, 0, 17.1%);
   width: 100%;
   position: fixed;
   padding: 0.5rem 0 1.5rem;
@@ -64,7 +63,7 @@
     }
 
     &__link:hover {
-        transform: scale(1.05, 1.05);
+      transform: scale(1.05, 1.05);
     }
   }
 }
@@ -76,7 +75,6 @@
 
   &__logo {
     color: orange;
-    font-size: 34px;
     padding-right: 3px;
     font-size: calc(var(--font-lg) + 0.5rem);
   }
