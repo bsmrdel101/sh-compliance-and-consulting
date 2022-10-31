@@ -35,7 +35,7 @@ export default function ScheduleForm() {
   return (
     <center>
       <form onSubmit={sendEmail} className='form-container'>
-        <h2 className='form-title'>Schedule a Consultation</h2>
+        <h3 className='form-title'>Schedule a Consultation</h3>
         <input 
           className='form-input'
           value={name}
