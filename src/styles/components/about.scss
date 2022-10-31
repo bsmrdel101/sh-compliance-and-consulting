@@ -5,14 +5,18 @@
   padding-bottom: 70px;
   font-size: var(--body-font-size);
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 
   &__title {
-    margin-top: 70px;
+    margin: 70px auto 1rem;
     font-size: var(--font-xl);
+    font-weight: 100;
   }
 
   p {
     margin: auto 5rem;
     font-size: var(--font-md);
+    line-height: 1.5;
+    font-weight: 100;
   }
 }

@@ -9,15 +9,19 @@ import Contact from "../components/Contact";
 export default function Home() {
   return (
     <Layout>
-      <Header />
-      <section id="section-one">
+      <section id="header">
+        <Header />
+      </section>
+      <section id="company-services">
         <CompanyServices />
       </section>
-      <section className="about-container">
+      <section id="about">
         <About />
       </section>
-      <ScheduleForm />
-      <section className="contact-container"> 
+      <section id="schedule-form">
+        <ScheduleForm />
+      </section>
+      <section id="contact"> 
         <Contact />
       </section>
     </Layout>
