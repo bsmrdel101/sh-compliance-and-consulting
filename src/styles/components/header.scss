@@ -1,0 +1,19 @@
+.header {
+    padding-top: 14rem;
+    padding-bottom: 140px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), 
+      url('../../../public/images/header.jpeg') no-repeat;
+    color: rgb(255, 255, 255);
+    border-bottom: 3px solid orange;
+    background-attachment: fixed;
+    width: 100%;
+
+    &__title {
+        text-shadow: 3px 3px #00000088;
+        padding-left: 5rem;
+        font-size: var(--font-md);
+    }
+}

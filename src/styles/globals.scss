@@ -1,6 +1,7 @@
 @import "./settings/colors";
 @import "./settings/fonts";
 @import "./components/nav";
+@import "./components/header";
 
 html,
 body {
@@ -8,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-family:
-    -apple-system,
+    sans-serif,
     BlinkMacSystemFont,
     "Segoe UI",
     Roboto,
@@ -18,7 +19,7 @@ body {
     "Fira Sans",
     "Droid Sans",
     "Helvetica Neue",
-    sans-serif;
+    -apple-system;
 }
 
 * {
