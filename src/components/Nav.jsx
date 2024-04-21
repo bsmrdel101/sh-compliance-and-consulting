@@ -79,7 +79,7 @@ export default function Nav() {
     <nav className="nav">
       <a className="nav-title" onClick={handleSelectHome} draggable={false}><span className="nav-title__logo">SH</span> Compliance & Service Consulting</a>
       <button className="nav__toggle" onClick={toggleNavList}>
-        <img src="images/hamburger_btn.svg" draggable={false} />
+        <img src="images/hamburger_btn.svg" alt="Nav hamburger button" draggable={false} />
       </button>
       <ul className="nav__links-container">
         {homeActive ? 

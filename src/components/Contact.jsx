@@ -9,7 +9,7 @@ export default function Contact() {
         <p>(651)-964-5235</p>
       </div>
       <p className="contact__email">SHcomplianceconsulting@gmail.com</p>
-      <img src="/images/linkedin.png" className="contact__icon" onClick={() => window.open("https://www.linkedin.com/in/ruth-hansen-b1b5a2167/")} />
+      <img src="/images/linkedin.png" alt="LinkedIn icon" className="contact__icon" onClick={() => window.open("https://www.linkedin.com/in/ruth-hansen-b1b5a2167/")} />
     </div>
   );
 }
