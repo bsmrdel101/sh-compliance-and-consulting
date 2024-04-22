@@ -77,36 +77,46 @@ export default function Nav() {
 
   return (
     <nav className="nav">
-      <a className="nav-title" onClick={handleSelectHome} draggable={false}><span className="nav-title__logo">SH</span> Compliance & Service Consulting</a>
+      <a href="javascript:;" className="nav-title" onClick={handleSelectHome} draggable={false}><span className="nav-title__logo">SH</span> Compliance & Service Consulting</a>
       <button className="nav__toggle" onClick={toggleNavList}>
         <img src="images/hamburger_btn.svg" alt="Nav hamburger button" draggable={false} />
       </button>
       <ul className="nav__links-container">
-        {homeActive ? 
-          <a className="nav__link nav__link--active" onClick={handleSelectHome} draggable={false}>Home</a> 
-          : 
-          <a className="nav__link" onClick={handleSelectHome} draggable={false}>Home</a>
-        }
-        {servicesActive ? 
-          <a className="nav__link nav__link--active" draggable={false}>Services</a> 
-          : 
-          <a className="nav__link" onClick={handleSelectServices} draggable={false}>Services</a>
-        }
-        {aboutActive ?
-          <a className="nav__link nav__link--active" onClick={handleSelectAbout} draggable={false}>About</a>
-          :
-          <a className="nav__link" onClick={handleSelectAbout} draggable={false}>About</a>
-        }
-        {scheduleActive ?
-          <a className="nav__link nav__link--active" onClick={handleSelectSchedule} draggable={false}>Schedule</a>
-          :
-          <a className="nav__link" onClick={handleSelectSchedule} draggable={false}>Schedule</a>
-        }
-        {contactActive ?
-          <a className="nav__link nav__link--active" onClick={handleSelectContact} draggable={false}>Contact</a>
-          :
-          <a className="nav__link" onClick={handleSelectContact} draggable={false}>Contact</a>
-        }
+        <li>
+          {homeActive ? 
+            <a href="javascript:;" className="nav__link nav__link--active" onClick={handleSelectHome} draggable={false}>Home</a> 
+            : 
+            <a href="javascript:;" className="nav__link" onClick={handleSelectHome} draggable={false}>Home</a>
+          }
+        </li>
+        <li>
+          {servicesActive ? 
+            <a href="javascript:;" className="nav__link nav__link--active" draggable={false}>Services</a> 
+            : 
+            <a href="javascript:;" className="nav__link" onClick={handleSelectServices} draggable={false}>Services</a>
+          }
+        </li>
+        <li>
+          {aboutActive ?
+            <a href="javascript:;" className="nav__link nav__link--active" onClick={handleSelectAbout} draggable={false}>About</a>
+            :
+            <a href="javascript:;" className="nav__link" onClick={handleSelectAbout} draggable={false}>About</a>
+          }
+        </li>
+        <li>
+          {scheduleActive ?
+            <a href="javascript:;" className="nav__link nav__link--active" onClick={handleSelectSchedule} draggable={false}>Schedule</a>
+            :
+            <a href="javascript:;" className="nav__link" onClick={handleSelectSchedule} draggable={false}>Schedule</a>
+          }
+        </li>
+        <li>
+          {contactActive ?
+            <a href="javascript:;" className="nav__link nav__link--active" onClick={handleSelectContact} draggable={false}>Contact</a>
+            :
+            <a href="javascript:;" className="nav__link" onClick={handleSelectContact} draggable={false}>Contact</a>
+          }
+        </li>
       </ul>
     </nav>
   );

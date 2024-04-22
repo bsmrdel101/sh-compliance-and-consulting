@@ -12,12 +12,14 @@ export default function CompanyServices() {
             <li>We can collaborate with you to develop, implement, and maintain your Quality Management System for compliance to global regulatory requirements.</li>
             <li>Quality System Development and Creation of Applicable Procedures</li>
             <li>Quality System Auditing under the following requirements:</li>
-            <ul>
-              <li>ISO 13485:2016</li>
-              <li>FDA Quality System Regulations (QSR)</li>
-              <li>MDSAP (Australia, Brazil, Canada, United States, Japan)</li>
-              <li>EUMDR 2017/745</li>
-            </ul>
+            <li style={{ listStyleType: 'none' }}>
+              <ul>
+                <li>ISO 13485:2016</li>
+                <li>FDA Quality System Regulations (QSR)</li>
+                <li>MDSAP (Australia, Brazil, Canada, United States, Japan)</li>
+                <li>EUMDR 2017/745</li>
+              </ul>
+            </li>
           </ul>
         </div>
         <div className="list-item">

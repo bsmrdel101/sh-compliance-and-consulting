@@ -3,7 +3,7 @@
   width: 100%;
   position: fixed;
   padding: 0.5rem 0 1.5rem;
-  background-color: var(--bg-1);
+  background-color: var(--bg-0);
 
   &__toggle {
     position: absolute;
@@ -26,12 +26,18 @@
 
   &__links-container {
     display: none;
+    list-style-type: none;
 
     &--open {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
   }
 
   &__link {
