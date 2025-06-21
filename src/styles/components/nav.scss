@@ -43,10 +43,9 @@
   &__link {
     transition: all ease-in-out 0.2s;
     cursor: pointer;
-    padding-bottom: 0.1rem;
     border: 2px solid transparent;
     background-color: transparent;
-    padding: 0;
+    padding: 0 0 0.1rem;
     font-size: calc(var(--font-sm) + 8);
 
     &--active {
