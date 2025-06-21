@@ -1,122 +1,90 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import NavLink from './NavLink';
+
 
 export default function Nav() {
-  const [open, setOpen] = useState(true);
-  const [homeActive, setHomeActive] = useState(true);
-  const [servicesActive, setServicesActive] = useState(false);
-  const [aboutActive, setAboutActive] = useState(false);
-  const [scheduleActive, setScheduleActive] = useState(false);
-  const [contactActive, setContactActive] = useState(false);
+  const [activeLink, setActiveLink] = useState('home');
 
-  const handleSelectHome = () => {
-    window.scrollTo(0, 0);
-  }
+  useEffect(() => {
+    const sectionSelectors = {
+      home: '#header',
+      services: '#company-services',
+      about: '#about',
+      schedule: '#schedule-form',
+      contact: '#contact',
+    };
 
-  const handleSelectServices = () => {
-    window.scrollTo(0, 470);
-  }
+    const getSectionOffsets = () => (
+      Object.entries(sectionSelectors).map(([name, selector]) => {
+        const el = document.querySelector(selector);
+        return el ? { name, top: el.getBoundingClientRect().top + window.scrollY } : null;
+      }).filter(Boolean)
+    );
 
-  const handleSelectAbout = () => {
-    window.scrollTo(0, 1150);
-  }
+    let sections = getSectionOffsets();
 
-  const handleSelectSchedule = () => {
-    window.scrollTo(0, 1500);
-  }
-
-  const handleSelectContact = () => {
-    window.scrollTo(0, 3000);
-  }
-
-  if (typeof window !== "undefined") window.addEventListener('scroll', () => {
-    let scroll = window.scrollY;
+    const handleScroll = () => {
+      const scrollY = window.scrollY + window.innerHeight / 2;
+      const pageBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 5;
     
-    // Switches which nav element is active
-    if (scroll <= 400) {
-      setHomeActive(true);
-      setServicesActive(false);
-      setAboutActive(false);
-      setScheduleActive(false);
-      setContactActive(false);
-    } else if (scroll > 400 && scroll < 900) {
-      setHomeActive(false);
-      setServicesActive(true);
-      setAboutActive(false);
-      setScheduleActive(false);
-      setContactActive(false);
-    } else if (scroll > 900 && scroll < 1400) {
-      setHomeActive(false);
-      setServicesActive(false);
-      setAboutActive(true);
-      setScheduleActive(false);
-      setContactActive(false);
-    } else if (scroll > 1400 && scroll < 1700) {
-      setHomeActive(false);
-      setServicesActive(false);
-      setAboutActive(false);
-      setScheduleActive(true);
-      setContactActive(false);
-    } else if (scroll > 1700) {
-      setHomeActive(false);
-      setServicesActive(false);
-      setAboutActive(false);
-      setScheduleActive(false);
-      setContactActive(true);
-    }
-  });
+      let current = sections[0]?.name;
+    
+      for (let i = 0; i < sections.length; i++) {
+        const thisSection = sections[i];
+        const nextSection = sections[i + 1];
+        if (!nextSection || scrollY < nextSection.top) {
+          current = thisSection.name;
+          break;
+        }
+      }
+
+      if (pageBottom) {
+        current = 'contact';
+      }
+      if (current !== activeLink) {
+        setActiveLink(current);
+      }
+    };
+
+    const handleResizeOrLoad = () => {
+      sections = getSectionOffsets();
+      handleScroll();
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResizeOrLoad);
+    window.addEventListener('load', handleResizeOrLoad);
+    handleResizeOrLoad();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResizeOrLoad);
+      window.removeEventListener('load', handleResizeOrLoad);
+    };
+  }, [activeLink]);
+
+  const handleNavigate = (selector) => {
+    document.querySelector(selector)?.scrollIntoView({ block: 'center' });
+  };
 
   const toggleNavList = () => {
     const navList = document.querySelector('.nav__links-container');
-    setOpen(!open);
-    if (open) {
-      navList.classList.add('nav__links-container--open');
-    } else {
-      navList.classList.remove('nav__links-container--open');
-    }
+    navList.classList.toggle('nav__links-container--open')
   };
+
 
   return (
     <nav className="nav">
-      <a href="javascript:;" className="nav-title" onClick={handleSelectHome} draggable={false}><span className="nav-title__logo">SH</span> Compliance & Service Consulting</a>
+      <NavLink className="nav-title" active={activeLink === 'home'} onClick={() => handleNavigate('#header')}><span className="nav-title__logo">SH</span> Compliance & Service Consulting</NavLink>
       <button className="nav__toggle" onClick={toggleNavList}>
         <img src="images/hamburger_btn.svg" alt="Nav hamburger button" draggable={false} />
       </button>
       <ul className="nav__links-container">
-        <li>
-          {homeActive ? 
-            <a href="javascript:;" className="nav__link nav__link--active" onClick={handleSelectHome} draggable={false}>Home</a> 
-            : 
-            <a href="javascript:;" className="nav__link" onClick={handleSelectHome} draggable={false}>Home</a>
-          }
-        </li>
-        <li>
-          {servicesActive ? 
-            <a href="javascript:;" className="nav__link nav__link--active" draggable={false}>Services</a> 
-            : 
-            <a href="javascript:;" className="nav__link" onClick={handleSelectServices} draggable={false}>Services</a>
-          }
-        </li>
-        <li>
-          {aboutActive ?
-            <a href="javascript:;" className="nav__link nav__link--active" onClick={handleSelectAbout} draggable={false}>About</a>
-            :
-            <a href="javascript:;" className="nav__link" onClick={handleSelectAbout} draggable={false}>About</a>
-          }
-        </li>
-        <li>
-          {scheduleActive ?
-            <a href="javascript:;" className="nav__link nav__link--active" onClick={handleSelectSchedule} draggable={false}>Schedule</a>
-            :
-            <a href="javascript:;" className="nav__link" onClick={handleSelectSchedule} draggable={false}>Schedule</a>
-          }
-        </li>
-        <li>
-          {contactActive ?
-            <a href="javascript:;" className="nav__link nav__link--active" onClick={handleSelectContact} draggable={false}>Contact</a>
-            :
-            <a href="javascript:;" className="nav__link" onClick={handleSelectContact} draggable={false}>Contact</a>
-          }
-        </li>
+        <li><NavLink active={activeLink === 'home'} onClick={() => handleNavigate('#header')}>Home</NavLink></li>
+        <li><NavLink active={activeLink === 'services'} onClick={() => handleNavigate('#company-services')}>Services</NavLink></li>
+        <li><NavLink active={activeLink === 'about'} onClick={() => handleNavigate('#about')}>About</NavLink></li>
+        <li><NavLink active={activeLink === 'schedule'} onClick={() => handleNavigate('#schedule-form')}>Schedule</NavLink></li>
+        <li><NavLink active={activeLink === 'contact'} onClick={() => handleNavigate('#contact')}>Contact</NavLink></li>
       </ul>
     </nav>
   );
