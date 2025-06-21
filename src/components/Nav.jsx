@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NavLink from './NavLink';
+import Image from 'next/image';
 
 
 export default function Nav() {
@@ -77,7 +78,7 @@ export default function Nav() {
     <nav className="nav">
       <NavLink className="nav-title" active={activeLink === 'home'} onClick={() => handleNavigate('#header')}><span className="nav-title__logo">SH</span> Compliance & Service Consulting</NavLink>
       <button className="nav__toggle" onClick={toggleNavList}>
-        <img src="images/hamburger_btn.svg" alt="Nav hamburger button" draggable={false} />
+        <Image src="/images/hamburger_btn.svg" alt="Nav hamburger button" draggable={false} height="26px" width="28px" />
       </button>
       <ul className="nav__links-container">
         <li><NavLink active={activeLink === 'home'} onClick={() => handleNavigate('#header')}>Home</NavLink></li>

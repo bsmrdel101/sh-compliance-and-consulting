@@ -4,6 +4,7 @@
   position: fixed;
   padding: 0.5rem 0 1.5rem;
   background-color: var(--bg-0);
+  z-index: 1;
 
   &__toggle {
     position: absolute;
@@ -15,7 +16,6 @@
     transition: all ease-in-out 200ms;
 
     img {
-      max-width: 2rem;
       height: auto;
     }
 
@@ -50,7 +50,7 @@
     font-size: calc(var(--font-sm) + 8);
 
     &--active {
-      border-bottom: 2px solid orange;
+      border-bottom: 2px solid var(--orange-0);
     }
 
     &:hover {
@@ -85,7 +85,7 @@
   border: none;
 
   &__logo {
-    color: orange;
+    color: var(--orange-0);
     padding-right: 3px;
     font-size: calc(var(--font-lg) + 0.5rem);
   }

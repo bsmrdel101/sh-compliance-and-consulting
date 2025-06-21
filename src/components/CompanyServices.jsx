@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import React from 'react';
+
 
 export default function CompanyServices() {
   return (
@@ -6,7 +8,7 @@ export default function CompanyServices() {
       <h2 className="services__title">Services</h2>
       <div className="services__list">
         <div className="list-item">
-          <center><img src="/images/advancement.jpeg" alt="Quality Management Systems" height="200px" /></center>
+          <center><Image src="/images/advancement.jpeg" alt="Quality Management Systems" height="200px" width="280px" /></center>
           <h2>Quality Management Systems (QMS)</h2>
           <ul>
             <li>We can collaborate with you to develop, implement, and maintain your Quality Management System for compliance to global regulatory requirements.</li>
@@ -14,6 +16,7 @@ export default function CompanyServices() {
             <li>Quality System Auditing under the following requirements:</li>
             <li style={{ listStyleType: 'none' }}>
               <ul>
+                <li>ISO 9001:2015</li>
                 <li>ISO 13485:2016</li>
                 <li>FDA Quality System Regulations (QSR)</li>
                 <li>MDSAP (Australia, Brazil, Canada, United States, Japan)</li>
@@ -23,7 +26,7 @@ export default function CompanyServices() {
           </ul>
         </div>
         <div className="list-item">
-          <center><img src="/images/safety.jpeg" alt="Regulatory Affairs" height="200px" /></center>
+          <center><Image src="/images/safety.jpeg" alt="Regulatory Affairs" height="200px" width="280px" /></center>
           <h2>Regulatory Affairs</h2>
           <ul>
             <li>Regulatory Standards Assessment / Gap Analysis</li>
@@ -32,7 +35,7 @@ export default function CompanyServices() {
           </ul>
         </div>
         <div className="list-item">
-          <center><img src="/images/quality.jpeg" alt="Quality Assurance" height="200px" /></center>
+          <center><Image src="/images/quality.jpeg" alt="Quality Assurance" height="200px" width="280px" /></center>
           <h2>Quality Assurance</h2>
           <ul>
             <li>Facility Qualification / Manufacturing Transfer Facility Qualification</li>
