@@ -11,7 +11,7 @@ export default function Contact() {
         <p>(651)-964-5235</p>
       </div>
       <p className="contact__email">SHcomplianceconsulting@gmail.com</p>
-      <Image className="contact__icon" src="/images/linkedin.jpg" alt="LinkedIn icon" onClick={() => window.open("https://www.linkedin.com/in/ruth-hansen-b1b5a2167/")} height="45px" width="45px" />
+      <Image className="contact__icon" src="/images/linkedin.jpg" alt="LinkedIn icon" onClick={() => window.open("https://www.linkedin.com/in/ruth-hansen-b1b5a2167/")} height={45} width={45} />
     </article>
   );
 }

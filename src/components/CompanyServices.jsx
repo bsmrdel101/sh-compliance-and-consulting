@@ -8,7 +8,7 @@ export default function CompanyServices() {
       <h2 className="services__title">Services</h2>
       <div className="services__list">
         <div className="list-item">
-          <center><Image src="/images/advancement.jpeg" alt="Quality Management Systems" height="200px" width="280px" /></center>
+          <center><Image src="/images/advancement.jpeg" alt="Quality Management Systems" height={200} width={280} /></center>
           <h2>Quality Management Systems (QMS)</h2>
           <ul>
             <li>We can collaborate with you to develop, implement, and maintain your Quality Management System for compliance to global regulatory requirements.</li>
@@ -26,7 +26,7 @@ export default function CompanyServices() {
           </ul>
         </div>
         <div className="list-item">
-          <center><Image src="/images/safety.jpeg" alt="Regulatory Affairs" height="200px" width="280px" /></center>
+          <center><Image src="/images/safety.jpeg" alt="Regulatory Affairs" height={200} width={280} /></center>
           <h2>Regulatory Affairs</h2>
           <ul>
             <li>Regulatory Standards Assessment / Gap Analysis</li>
@@ -35,7 +35,7 @@ export default function CompanyServices() {
           </ul>
         </div>
         <div className="list-item">
-          <center><Image src="/images/quality.jpeg" alt="Quality Assurance" height="200px" width="280px" /></center>
+          <center><Image src="/images/quality.jpeg" alt="Quality Assurance" height={200} width={280} /></center>
           <h2>Quality Assurance</h2>
           <ul>
             <li>Facility Qualification / Manufacturing Transfer Facility Qualification</li>
