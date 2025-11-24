@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.sh-compliance-and-consulting.com
+
+# Sitemaps
+Sitemap: https://www.sh-compliance-and-consulting.com/sitemap.xml
