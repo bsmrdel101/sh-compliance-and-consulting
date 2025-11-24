@@ -1,4 +1,3 @@
-import React from 'react';
 import CompanyServices from '../components/CompanyServices';
 import Header from '../components/Header';
 import Layout from "../components/Layout";

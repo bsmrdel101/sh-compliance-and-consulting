@@ -10,7 +10,6 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Compliance & Consulting services for companies and individuals." />
           <meta name="theme-color" content="#317EFB" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>

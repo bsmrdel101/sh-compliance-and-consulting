@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import '../styles/globals.scss';
+import { useEffect } from 'react';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import Head from 'next/head';
+import '../styles/globals.scss';
+
 
 export default function Application({ Component, pageProps }) {
   useEffect(() => {
@@ -17,6 +18,7 @@ export default function Application({ Component, pageProps }) {
     <>
       <Head>
         <title>Compliance & Consulting</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
